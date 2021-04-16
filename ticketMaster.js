@@ -16,10 +16,24 @@ const searchBtn = (artistName) => {
         url: url,
         async: true,
         dataType: "json",
-        success: function (json) {
-            console.log(json);
+        success: function (data) {
+            console.log(data);
             // Parse the response.
-            // Do other things.
+            if( data.page.totalElements === 0){
+                $("#searchResultHeader").html('This artist has no upcoming tour dates 😫')
+            }
+            else{
+            $("#result1").html(data._embedded.events[0].dates.start.localDate)
+            $("#result2").html(data._embedded.events[0]._embedded.venues[0].city.name)
+            $("#result3").html(data._embedded.events[0]._embedded.venues[0].name)
+            }
+
+
+
+
+
+
+            
         },
         error: function (xhr, status, err) {
             // This time, we do not end up here!
