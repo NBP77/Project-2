@@ -1,15 +1,8 @@
 {
-  "name": "museum-paintings",
+  "name": "project-2-groupie",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "seed": "node seeds/index.js"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
@@ -20,5 +13,20 @@
     "handlebars": "^4.7.6",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/index.js"
+  },
+"repositiry": {
+  "type": "git",
+  "url": ""
+},
+  "authors": "Jared de Uriarte, Nick Pendergast, Tonya Fletcher",
+  "license": "ISC" 
 }
