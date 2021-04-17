@@ -73,5 +73,12 @@ router.get('/event/:id', (req, res) => {
         });
 });
 
+// router.get('/events', (req, res) => {
+//     if (req.session.loggedIn) {
+//       res.redirect('/');
+//       return;
+//     }
+//     res.render('events');
+//   });
 
 module.exports = router;
