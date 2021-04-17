@@ -19,18 +19,34 @@ const searchBtn = (artistName) => {
         dataType: "json",
         success: function (data) {
             console.log(data);
-            // TODO: Switch this to a switch case for 1) no tour dates found 2)no artist found 3) sucess.
-            if( data.page.totalElements === 0){
-                $("##searchResultHeader").empty();
+            if (data.page.totalElements === 0) {
+                $("#searchResultHeader").empty();
                 $("#searchResultHeader").html('This artist has no upcoming tour dates 😫')
             }
-            else{
-            $("#result1").html(data._embedded.events[0].dates.start.localDate)
-            $("#result2").html(data._embedded.events[0]._embedded.venues[0].city.name)
-            $("#result3").html(data._embedded.events[0]._embedded.venues[0].name)
+            else {
+                $("#searchResultHeader").empty();
+                $("#result1").html(data._embedded.events[0].dates.start.localDate)
+                $("#result2").html(data._embedded.events[0]._embedded.venues[0].city.name)
+                $("#result3").html(data._embedded.events[0]._embedded.venues[0].name)
             }
         },
         error: function (xhr, status, err) {
         }
     });
 }
+
+//This switch case needs word. Data object from  was not being passed through 
+// switch (data) {
+//     case data.page.totalElements === 0:
+//         $("#searchResultHeader").empty();
+//         $("#searchResultHeader").html('This artist has no upcoming tour dates 😫')
+//         break;
+//     case data.page.totalElements >= 1:
+//         $("#searchResultHeader").empty();
+//         $("#result1").html(data._embedded.events[0].dates.start.localDate)
+//         $("#result2").html(data._embedded.events[0]._embedded.venues[0].city.name)
+//         $("#result3").html(data._embedded.events[0]._embedded.venues[0].name)
+//         break;
+//     default:
+//         console.log('DEFAULT--->\n' + data)
+// }
