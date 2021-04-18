@@ -8,13 +8,13 @@
 } */
 
 #loginCard{
-    background-color: white;
+    background-color:rgba(255,255,255, 0.2);
     border-radius: 5px;
     padding: 40px;
 } 
 
 #signUpCard{
-    background-color: white;
+    background-color:rgba(255,255,255, 0.2);
     border-radius: 5px;
     padding: 40px;
 }
@@ -22,5 +22,24 @@
 .u-full-width {
     width: 100%;
     box-sizing: border-box; 
+}
+
+#homeCard{
+
+    background-color:rgba(255,255,255, 0.2);
+    /* background-color: white; */
+    border-radius: 5px;
+}
+
+#dash{
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#searchInput{
+    display:flex;
+    justify-content: center;
+    padding: 20px;
 }
 
