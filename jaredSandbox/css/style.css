@@ -1,31 +1,26 @@
-#body {
+#body{
+    background-color: #011627;
     height: 100vh;
-    background-image: url(/jaredSandbox/images/swtTour.jpg);
-    background-size: 110% 110%;
-    background-position: center center;
-    animation: shrink 60s infinite alternate;
-  }
-  /* @keyframes shrink {
-    0% {
-      background-size: 150% 150%;
-    }
-    100% {
-      background-size: 100% 100%;
-    }
-  } */
+}
 
 /* .container{
-    background-color: #e5e5e5;
+    background-color: #011627;
 } */
 
 #loginCard{
     background-color: white;
     border-radius: 5px;
-    padding: 5px;
+    padding: 40px;
 } 
 
 #signUpCard{
     background-color: white;
     border-radius: 5px;
-    padding: 5px;
+    padding: 40px;
 }
+
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box; 
+}
+
