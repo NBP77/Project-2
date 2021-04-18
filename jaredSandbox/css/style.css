@@ -1,0 +1,31 @@
+#body {
+    height: 100vh;
+    background-image: url(/jaredSandbox/images/swtTour.jpg);
+    background-size: 110% 110%;
+    background-position: center center;
+    animation: shrink 60s infinite alternate;
+  }
+  /* @keyframes shrink {
+    0% {
+      background-size: 150% 150%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
+  } */
+
+/* .container{
+    background-color: #e5e5e5;
+} */
+
+#loginCard{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+} 
+
+#signUpCard{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}

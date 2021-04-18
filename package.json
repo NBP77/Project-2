@@ -23,10 +23,10 @@
     "watch": "nodemon server.js",
     "seed": "node seeds/index.js"
   },
-"repositiry": {
-  "type": "git",
-  "url": ""
-},
+  "repositiry": {
+    "type": "git",
+    "url": ""
+  },
   "authors": "Jared de Uriarte, Nick Pendergast, Tonya Fletcher",
-  "license": "ISC" 
+  "license": "ISC"
 }
