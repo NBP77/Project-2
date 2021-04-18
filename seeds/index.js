@@ -1,10 +1,10 @@
 const sequelize = require('../config/connection');
-const seedPosts = require('./post-seeds');
+const seedEvents = require('./event-seeds');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
 
-  await seedPosts();
+  await seedEvents();
 
   process.exit(0);
 };

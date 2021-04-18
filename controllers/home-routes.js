@@ -5,8 +5,9 @@ router.get('/', (req, res) => {
     Event.findAll({
             attributes: [
                 'id',
-                'title',
-                'content',
+                'date',
+                'location',
+                'venue',
                 'created_at'
             ],
             include: [
@@ -45,8 +46,9 @@ router.get('/event/:id', (req, res) => {
             },
             attributes: [
                 'id',
-                'content',
-                'title',
+                'date',
+                'location',
+                'venue',
                 'created_at'
             ],
             include: [
