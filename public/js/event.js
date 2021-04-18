@@ -1,4 +1,4 @@
-async function newFormHandler(event) {
+async function eventFormHandler(event) {
     event.preventDefault();
   
     const title = document.querySelector('input[name="event-title"]').value;
