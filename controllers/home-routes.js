@@ -73,7 +73,6 @@ router.get('/event/:id', (req, res) => {
         });
 });
 
-
 const Dish = require('../models/Dish');
 
 // route to get all dishes
@@ -99,13 +98,5 @@ router.get('/', async (req, res) => {
           res.status(500).json(err);
       };     
   });
-
-// router.get('/events', (req, res) => {
-//     if (req.session.loggedIn) {
-//       res.redirect('/');
-//       return;
-//     }
-//     res.render('events');
-//   });
 
 module.exports = router;
