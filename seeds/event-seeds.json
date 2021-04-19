@@ -1,0 +1,25 @@
+[
+   {
+      "date": "09/17/2021",
+      "location": "Philly",
+      "venue": "MET"
+    },
+    {
+      "date": "09/12/2021",
+      "location": "Atlanta",
+      "venue": "Magic City"
+    },
+    { 
+      "date": "05/16/2021",
+      "location": "Miami",
+      "venue": "Club LIV"
+    },
+    {
+      "date": "02/3/2021",
+      "location": "Seattle",
+      "venue": "Century Link"
+    }
+  ]
+  
+  
+  

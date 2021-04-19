@@ -1,24 +1,11 @@
-// const sequelize = require('../config/connection');
-// const seedPosts = require('./post-seeds');
-
-// const seedAll = async () => {
-//   await sequelize.sync({ force: true });
-
-//   await seedPosts();
-
-//   process.exit(0);
-// };
-
-// seedAll();
-
 const sequelize = require('../config/connection');
-const Dish = require('../models/Dish');
-const dishData = require('./dish-seeds.json');
+const Event = require('../models/Event');
+const eventData = require('./event-seeds.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await Dish.bulkCreate(dishData, {
+  await Event.bulkCreate(eventData, {
     individualHooks: true,
     returning: true,
   });

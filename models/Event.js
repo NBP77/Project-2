@@ -11,13 +11,20 @@ Event.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    date: {
+      type: DataTypes.DATE,
+      allowNull: true,
+         
     },
-    content: {
+    location: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+         
+    },
+    venue: {
+      type: DataTypes.STRING,
+      allowNull: true, 
+      
     },
     user_id: {
       type: DataTypes.INTEGER,

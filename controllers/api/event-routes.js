@@ -4,11 +4,13 @@ const sequelize = require('../../config/connection');
 const eventData = require('../../utils/auth');
 
 router.get('/', (req, res) => {
-    Post.findAll({
+    Event.findAll({
             attributes: ['id',
-                'title',
-                'content',
-                'created_at'
+            'id',
+            'date',
+            'location',
+            'venue',
+            'created_at'
             ],
             order: [
                 ['created_at', 'DESC']
@@ -27,13 +29,15 @@ router.get('/', (req, res) => {
 
 });
 router.get('/:id', (req, res) => {
-    Post.findOne({
+    Event.findOne({
             where: {
                 id: req.params.id
             },
-            attributes: ['id',
-                'content',
-                'title',
+            attributes: [
+                'id',
+                'date',
+                'location',
+                'venue',
                 'created_at'
             ],
             include: [{
@@ -69,7 +73,7 @@ router.post('/', eventData, (req, res) => {
 });
 
 router.put('/:id', eventData, (req, res) => {
-    Post.update({
+    Event.update({
             title: req.body.title,
             content: req.body.content
         }, {
@@ -89,7 +93,7 @@ router.put('/:id', eventData, (req, res) => {
         });
 });
 router.delete('/:id', eventData, (req, res) => {
-    Post.destroy({
+    Event.destroy({
         where: {
             id: req.params.id
         }
