@@ -2,19 +2,31 @@
     height: 100vh;
     background-image: url("../images/swtTourDarker.png");
     background-size: cover;
-    background-size: 110% 110%;
+    /* background-size: 110% 110%; */
     background-position: center center;
-    animation: shrink 190s infinite alternate;
+    /* animation: shrink 190s infinite alternate; */
 }
-@keyframes shrink {
+/* @keyframes shrink {
   0% {
     background-size: 150% 150%;
   }
   100% {
     background-size: 100% 100%;
   }
+} */
+
+#title{
+    font-family: 'Raleway Dots', cursive;
+    /* font-family: 'Fredoka One', cursive; */
+    color:#ffff00;
+    font-size: 9rem;
+    /* text-align: center; */
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 24px #fff, 0 0 30px #fff, 0 0 35px #fff;
 }
 
+#mic{
+    font-size: 6rem;
+}
 
 #loginCard{
     background-color:rgba(202, 86,255, 0.4);
