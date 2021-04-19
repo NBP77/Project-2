@@ -14,17 +14,17 @@ Event.init(
     date: {
       type: DataTypes.DATE,
       allowNull: true,
-         // AllowNull True?
+         
     },
     location: {
       type: DataTypes.STRING,
       allowNull: true,
-         // AllowNull True?
+         
     },
     venue: {
       type: DataTypes.STRING,
       allowNull: true, 
-      // AllowNull True?
+      
     },
     user_id: {
       type: DataTypes.INTEGER,

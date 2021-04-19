@@ -15,18 +15,14 @@
   </header>
   <nav>
     <a href="/">Home</a>
-    <a class="link" href="/">Profile</a>
     {{#if loggedIn}}
+    <a href="/event">Search events!</a>
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
-    <a href="/dish/5">Events</a>
   </nav>
    <nav>
-    {{#if loggedIn}}
-    <button id="create-event" class="btn-no-style"><a href="/">Create A Event!</a></button>
-    {{/if}}
   </nav>
   <main>
     <div class="gallery">
