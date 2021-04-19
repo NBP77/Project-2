@@ -1,28 +1,33 @@
-/* #body{
-    background-color: #011627;
-    height: 100vh;
-} */
-
-
 #body {
     height: 100vh;
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3999/Tilt-Shift_-_Cityscene.jpg);
+    background-image: url("../images/swtTour.png");
+    background-size: cover;
     background-size: 110% 110%;
     background-position: center center;
+    animation: shrink 190s infinite alternate;
+}
+@keyframes shrink {
+  0% {
+    background-size: 150% 150%;
   }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+  
 
 /* .container{
     background-color: #011627;
 } */
 
 #loginCard{
-    background-color:rgba(255,255,255, 0.2);
+    background-color:rgba(202, 86,255, 0.4);
     border-radius: 5px;
     padding: 40px;
 } 
 
 #signUpCard{
-    background-color:rgba(255,255,255, 0.2);
+    background-color:rgba(202, 86,255, 0.4);
     border-radius: 5px;
     padding: 40px;
 }
@@ -33,9 +38,8 @@
 }
 
 #homeCard{
-
-    background-color:rgba(255,255,255, 0.2);
-    /* background-color: white; */
+    background-color:rgba(202, 86,255, 0.4);
+    /* background-color:rgba(255,255,255, 0.2); */
     border-radius: 5px;
 }
 
@@ -50,4 +54,35 @@
     justify-content: center;
     padding: 20px;
 }
+
+
+#searchResultCard1{
+    background-color: white;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#searchResultCard2{
+    background-color: white;
+    padding: 0.5rem;
+    text-align: center; 
+    border-radius: 5px;
+}
+
+#searchResultCard3{
+    background-color: white;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+
+#searchResultCard4{
+    background-color: white;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
 
