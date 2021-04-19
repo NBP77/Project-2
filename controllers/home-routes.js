@@ -3,7 +3,7 @@ const { Event, User } = require('../models');
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-    res.render('homePage', { User, loggedIn: req.session.loggedIn });
+    res.render('homepage', { User, loggedIn: req.session.loggedIn });
 
 });
  
