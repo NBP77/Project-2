@@ -5,9 +5,6 @@ const searchResultCard2 = '<div class="three columns" id="searchResultCard2"><p 
 const searchResultCard3 = '<div class="three columns" id="searchResultCard3"><p id="card3result1"></p><p id="card3result2"></p><p id="card3result3"></p></div>'
 const searchResultCard4 = '<div class="three columns" id="searchResultCard4"><p id="card4result1"></p><p id="card4result2"></p><p id="card4result3"></p></div>'
 
-
-
-
 // .searchBtn Event Listener
 $('.searchBtn').on('click', function () {
     // Grabbing the value from .artistSearch search bar
@@ -43,25 +40,28 @@ const searchBtn = (artistName) => {
                 $("#card1result1").html(data._embedded.events[0]._embedded.venues[0].city.name)
                 $("#card1result2").html(data._embedded.events[0]._embedded.venues[0].name)
                 $("#card1result3").html(data._embedded.events[0].dates.start.localDate)
-                $("#searchResultCard1").append('<button class="button-primary">GOING 🤘</button>')
+                $("#searchResultCard1").append('<button id="jared-button" class="button-primary">GOING 🤘</button>')
 
                 
                 $("#card2result1").html(data._embedded.events[1]._embedded.venues[0].city.name)
                 $("#card2result2").html(data._embedded.events[1]._embedded.venues[0].name)
                 $("#card2result3").html(data._embedded.events[1].dates.start.localDate)
-                $("#searchResultCard2").append('<button class="button-primary">GOING 🤘</button>')
+                $("#searchResultCard2").append('<button id="jared-button" class="button-primary">GOING 🤘</button>')
 
                 
                 $("#card3result1").html(data._embedded.events[2]._embedded.venues[0].city.name)
                 $("#card3result2").html(data._embedded.events[2]._embedded.venues[0].name)
                 $("#card3result3").html(data._embedded.events[2].dates.start.localDate)
-                $("#searchResultCard3").append('<button class="button-primary">GOING 🤘</button>')
+                $("#searchResultCard3").append('<button id="jared-button" class="button-primary">GOING 🤘</button>')
 
                 
                 $("#card4result1").html(data._embedded.events[3]._embedded.venues[0].city.name)
                 $("#card4result2").html(data._embedded.events[3]._embedded.venues[0].name)
                 $("#card4result3").html(data._embedded.events[3].dates.start.localDate)
-                $("#searchResultCard4").append('<button class="button-primary">GOING 🤘</button>')
+                $("#searchResultCard4").append('<button id="jared-button" class="button-primary">GOING 🤘</button>')
+
+                $('#homeCard').append('<br>', '<br>', '<br>')
+
             }
         },
         error: function (xhr, status, err) {
