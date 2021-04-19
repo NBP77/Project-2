@@ -28,42 +28,12 @@ router.get('/', (req, res) => {
         });
 
 });
-router.get('/:id', (req, res) => {
-    Event.findOne({
-            where: {
-                id: req.params.id
-            },
-            attributes: [
-                'id',
-                'date',
-                'location',
-                'venue',
-                'created_at'
-            ],
-            include: [{
-                    model: User,
-                    attributes: ['username']
-                },
-            ]
-        })
-        .then(eventData => {
-            if (!eventData) {
-                res.status(404).json({ message: 'Sorry no event with that Id' });
-                return;
-            }
-            res.json(eventData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
 
 router.post('/', eventData, (req, res) => {
     Event.create({
-            title: req.body.title,
-            content: req.body.content,
-            user_id: req.session.user_id
+            date: req.body.date,
+            location: req.body.location,
+            venue: req.session.venue
         })
         .then(eventData => res.json(eventData))
         .catch(err => {
@@ -72,26 +42,61 @@ router.post('/', eventData, (req, res) => {
         });
 });
 
-router.put('/:id', eventData, (req, res) => {
-    Event.update({
-            title: req.body.title,
-            content: req.body.content
-        }, {
-            where: {
-                id: req.params.id
-            }
-        }).then(eventData => {
-            if (!eventData) {
-                res.status(404).json({ message: 'Sorry no event with that Id' });
-                return;
-            }
-            res.json(eventData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
+
+// router.get('/:id', (req, res) => {
+//     Event.findOne({
+//             where: {
+//                 id: req.params.id
+//             },
+//             attributes: [
+//                 'id',
+//                 'date',
+//                 'location',
+//                 'venue',
+//                 'created_at'
+//             ],
+//             include: [{
+//                     model: User,
+//                     attributes: ['username']
+//                 },
+//             ]
+//         })
+//         .then(eventData => {
+//             if (!eventData) {
+//                 res.status(404).json({ message: 'Sorry no event with that Id' });
+//                 return;
+//             }
+//             res.json(eventData);
+//         })
+//         .catch(err => {
+//             console.log(err);
+//             res.status(500).json(err);
+//         });
+// });
+
+
+
+// router.put('/:id', eventData, (req, res) => {
+//     Event.update({
+//             title: req.body.title,
+//             content: req.body.content
+//         }, {
+//             where: {
+//                 id: req.params.id
+//             }
+//         }).then(eventData => {
+//             if (!eventData) {
+//                 res.status(404).json({ message: 'Sorry no event with that Id' });
+//                 return;
+//             }
+//             res.json(eventData);
+//         })
+//         .catch(err => {
+//             console.log(err);
+//             res.status(500).json(err);
+//         });
+// });
+
 router.delete('/:id', eventData, (req, res) => {
     Event.destroy({
         where: {
