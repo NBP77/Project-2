@@ -61,9 +61,9 @@ router.get('/:id', (req, res) => {
 
 router.post('/', eventData, (req, res) => {
     Event.create({
-            title: req.body.title,
-            content: req.body.content,
-            user_id: req.session.user_id
+            Date: req.body.date,
+            location: req.body.location,
+            venue: req.session.venue
         })
         .then(eventData => res.json(eventData))
         .catch(err => {
