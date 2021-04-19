@@ -6,6 +6,12 @@ router.get('/', (req, res) => {
     res.render('homepage', { User, loggedIn: req.session.loggedIn });
 
 });
+
+
+router.get('/mytours', (req, res) => {
+    res.render('mytours', { User, loggedIn: req.session.loggedIn });
+
+});
  
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
