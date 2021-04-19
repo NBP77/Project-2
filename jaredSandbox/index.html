@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupie</title>
+    <link rel="stylesheet" href="/jaredSandbox/css/normalize.css">
+    <link rel="stylesheet" href="/jaredSandbox/css/skeleton.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <h1>Groupie</h1>
+    <!-- ARTIST SEARCH -->
+    <input type="text" class="artistSearch" placeholder="Enter artist name">
+    <button class="searchBtn" type="button">Search</button>
+
+    <!-- SEARCH RESULTS -->
+
+    <h2 id="searchResultHeader"></h2>
+
+    <div class="flex flex-wrap" id="searchResultsContainer">
+        
+        <div class="container w-40 p-3 bg-white mx-auto rounded-md shadow-2xl" id="result1">
+            <p id="card1result1"></p>
+            <p id="card1result2"></p>
+            <p id="card1result3"></p>
+            <!-- <button href="#" class="bg-blue-400 w-14 rounded-full text-center text-white">add</button> -->
+        </div>
+
+
+        <div class="container w-40 p-3 bg-white mx-auto rounded-md shadow-2xl" id="result2">
+            <p id="card2result1"></p>
+            <p id="card2result2"></p>
+            <p id="card2result3"></p>
+            <!-- <button href="#" class="bg-blue-400 w-14 rounded-full text-center text-white">add</button> -->
+
+        </div>
+
+        <div class="container w-40 p-3 bg-white mx-auto rounded-md shadow-2xl" id="result3">
+            <p id="card3result1"></p>
+            <p id="card3result2"></p>
+            <p id="card3result3"></p>
+            <!-- <button href="#" class="bg-blue-400 w-14 rounded-full text-center text-white">add</button> -->
+        </div>
+
+
+        <div class="container w-40 p-3 bg-white mx-auto rounded-md shadow-2xl" id="result4">
+            <p id="card4result1"></p>
+            <p id="card4result2"></p>
+            <p id="card4result3"></p>
+            <!-- <button href="#" class="bg-blue-400 w-14 rounded-full text-center text-white">add</button> -->
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./ticketMaster.js"></script>
+</body>
+
+</html>
