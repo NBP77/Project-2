@@ -1,0 +1,98 @@
+{{#if loggedIn}}
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row" id="titleRow">
+            <div class="twelve columns">
+                <h1 id="title">group<span id="mic">🎤</span>e</h1>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container" id="homeCard">
+
+
+        <div class="row">
+
+            <br>
+            <br>
+
+            <div class="twelve columns" id="dash">
+                <button href="/" id="jared-button" class="button-primary">Search Tours</button>
+                <button href="/mytours" class="button-primary" id="jared-button">My Tours</button>
+                <button class="button-primary" id="jared-button">Log Out</button>
+            </div>
+
+        </div>
+
+        <div class="row" id="myTourRow">
+
+            <div class="twelve columns" id="tourTable">
+                <br>
+                <br>
+                <br>
+
+                <table class="u-full-width">
+                    <thead>
+                        <tr>
+                            <th>Artist</th>
+                            <th>Date</th>
+                            <th>Venue</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ariana Grande</td>
+                            <td>December 28, 2021</td>
+                            <td>Wells Fargo Center</td>
+                            <td>Philadelphia</td>
+                        </tr>
+                        <tr>
+                            <td>Justin Bieber</td>
+                            <td>May 9, 2021</td>
+                            <td>Madison Square Garden</td>
+                            <td>New York</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <br>
+                <br>
+
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/ticketMaster.js"></script>
+    <script src="/js/logout.js"></script>
+    <script src="/js/login.js"></script>
+
+    {{else}}
+      <div class="container">
+        <div class="row" id="titleRow">
+            <div class="twelve columns">
+                <h1 id="title">group<span id="mic">🎤</span>e</h1>
+                <a href="/login">Please login</a>
+            </div>
+        </div>
+    </div> 
+    {{/if}}
+
+    

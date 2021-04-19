@@ -1,32 +1,18 @@
 const sequelize = require('../config/connection');
 const { Event, User } = require('../models');
 const router = require('express').Router();
+
 router.get('/', (req, res) => {
-    Event.findAll({
-            attributes: [
-                'id',
-                'date',
-                'location',
-                'venue',
-                'created_at'
-            ],
-            include: [
-                {
-                    model: User,
-                    attributes: ['username']
-                }
-            ]
-        })
-        .then(eventData => {
-            const events = eventData.map(event => event.get({ plain: true }));
-            res.render('homepage', { events, loggedIn: req.session.loggedIn });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+    res.render('homepage', { User, loggedIn: req.session.loggedIn });
+
 });
 
+
+router.get('/mytours', (req, res) => {
+    res.render('mytours', { User, loggedIn: req.session.loggedIn });
+
+});
+ 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
