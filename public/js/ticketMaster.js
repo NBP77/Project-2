@@ -86,10 +86,13 @@ const searchBtn = (artistName) => {
     });
 }
 
-$('#tour-button').click(function () {
-    window.location.href='http://localhost:3001/mytours'
-})
 
 $('#jared-button').click(function () {
-    window.location.href='http://localhost:3001/'
+    window.location.href='http://localhost:3001/';
+    
+})
+
+$('#tour-button').click(function () {
+    window.location.href='http://localhost:3001/mytours';
+    alert('clicked me')
 })
