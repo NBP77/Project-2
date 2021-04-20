@@ -94,5 +94,5 @@ $('#jared-button').click(function () {
 
 $('#tour-button').click(function () {
     window.location.href='http://localhost:3001/mytours';
-    alert('clicked me')
+
 })
